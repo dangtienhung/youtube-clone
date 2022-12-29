@@ -19,7 +19,7 @@ function App() {
             <Route path="/video/:id" element={<VideoDetail />} />
             <Route path="/search/:searchTerm" element={<SearchFeed />} />
          </Routes>
-         <Outlet />
+         {/* <Outlet /> */}
       </Box>
    );
 }

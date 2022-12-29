@@ -2,9 +2,7 @@ import React from 'react';
 import { Box, Stack, Typography } from '@mui/material';
 import { categories } from '../utils/constans';
 
-const selectedCategory = 'New';
-
-const SideBar = () => {
+const SideBar = ({ selectedCategory, setSelectedCategory }) => {
    return (
       <Stack
          direction={'row'}
@@ -16,6 +14,7 @@ const SideBar = () => {
       >
          {categories.map((category) => (
             <button
+               onClick={() => setSelectedCategory(category.name)}
                key={category.name}
                className="category-btn"
                style={{
